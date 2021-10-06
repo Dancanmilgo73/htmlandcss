@@ -1,25 +1,30 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-#nav__bar {
+#header {
   display: flex;
   justify-content: space-between;
+  padding: 2.5vh;
+  position: sticky;
+  background-color: white;
+  top: 0;
 }
-#nav__menu {
+#header-img {
+  width: 30%;
+}
+#nav-bar {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 
-  /* justify-content: space-around; */
+  width: 45%;
 }
-#nav__menu a {
+#nav-bar a {
   text-decoration: none;
-  padding: 5px;
-  margin-left: 5vw;
+  font-weight: bold;
   color: inherit;
-}
-#nav__menu a:nth-child(1) {
-  /* margin-left: 0; */
 }
 
 #title {
@@ -27,40 +32,117 @@
   flex-direction: column;
   align-items: center;
 }
+#title p {
+  font-weight: bold;
+  font-size: 20px;
+}
 #title div {
   margin-bottom: 1vw;
 }
-#title button {
+
+#email {
+  padding: 10px;
+}
+#submit {
   background-color: yellow;
   border: none;
   padding: 10px;
   font-weight: bold;
   font-size: 17px;
+  cursor: pointer;
 }
+
 #info {
-  width: 60%;
+  width: 70%;
   margin: auto;
 }
+
 .item {
   display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 4vh 2vh 4vh 2vh;
 }
+
 .icon {
-  color: yellow !important;
+  color: rgb(217, 255, 0) !important;
+  width: 20%;
 }
-@media (max-width: 500px) {
-  #nav__bar {
+.video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 60vh;
+  width: 45vw;
+  margin: 5vw 0 5vw 0; */
+}
+.video iframe {
+  height: 55vh;
+  width: 45vw;
+}
+.cards__container {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  margin: 100px auto;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  flex-wrap: wrap;
+}
+.card .top {
+  background-color: lightgrey;
+  width: 100%;
+  text-align: center;
+  padding: 2vh;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content p {
+  margin-bottom: 20%;
+  font-weight: bold;
+  font-size: 20px;
+}
+.content li {
+  padding: none;
+  margin-bottom: 5%;
+  list-style: none;
+  text-align: center;
+}
+.footer button {
+  background-color: yellow;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+  margin: 10px;
+}
+@media (max-width: 650px) {
+  #header {
     flex-direction: column;
 
-    /* align-content: center; */
     align-items: center;
     justify-items: space-around;
   }
-  #nav__menu {
+  #nav-bar {
     flex-direction: column;
     align-items: center;
   }
-  #nav__menu a {
-    padding: 0;
-    margin-left: 0;
+  #nav-bar a {
+    margin: 1vh;
+  }
+  .cards__container {
+    flex-direction: column;
   }
 }
